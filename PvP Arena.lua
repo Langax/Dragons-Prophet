@@ -125,9 +125,24 @@ function ny_JoinQueue()
             local Result1 = DialogGetResult(State.Player1)
             local Result2 = DialogGetResult(State.Player2)
 
+            ny_Debug("Player 1 Result: "..Result1)
+            ny_Debug("Player 2 Result: "..Result2)
+
             if Result1 == 0 or Result2 == 0 then -- Someone backed out
                 DialogClose(State.Player1); DialogClose(State.Player2)
                 if Result1 == 0 then
+                    ny_Chat(State.Player1, "You left the queue!")
+                    ny_Chat(State.Player2, "Your Opponent backed out! Re-entering queue!")
+                    ny_RemoveFromQueue(State.Player1)
+                else
+                    ny_Chat(State.Player2, "You left the queue!")
+                    ny_Chat(State.Player1, "Your Opponent backed out! Re-entering queue!")
+                    ny_RemoveFromQueue(State.Player2)
+                end
+                return
+            elseif Result1 == -1 or Result2 == -1 then -- Disconnect
+                DialogClose(State.Player1); DialogClose(State.Player2)
+                if Result1 == -1 then
                     ny_Chat(State.Player1, "You left the queue!")
                     ny_Chat(State.Player2, "Your Opponent backed out! Re-entering queue!")
                     ny_RemoveFromQueue(State.Player1)
