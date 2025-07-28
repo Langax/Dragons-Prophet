@@ -1,6 +1,6 @@
 --==============================================================
 --  PvP Queue & Arena 
---  Current Version: 2.8.3
+--  Current Version: 2.8.4
 --  Made by Lang
 --==============================================================
 
@@ -124,9 +124,6 @@ function ny_JoinQueue()
         for _ = 1, 20 do
             local Result1 = DialogGetResult(State.Player1)
             local Result2 = DialogGetResult(State.Player2)
-
-            ny_Debug("Player 1 Result: "..Result1)
-            ny_Debug("Player 2 Result: "..Result2)
 
             if Result1 == 0 or Result2 == 0 then -- Someone backed out
                 DialogClose(State.Player1); DialogClose(State.Player2)
