@@ -45,6 +45,7 @@ For full functionality, add functions such as ny_Logout() into the LuaEvent_Logo
 ### ✅ 'Custom Dungeon.lua'
 
 An example setup on adding new Custom Dungeons into Dragon's Prophet (Possible to expand further, or add to other Dungeons in the future)
+This is not a finalized system, and has not been balanced for player use.
 
 #### Features:
 - Version‑aware entry point – single ny_SpiderQuest() dispatcher spins up Path One or Path Two by version flag, making future variants pluggable.
@@ -56,6 +57,7 @@ An example setup on adding new Custom Dungeons into Dragon's Prophet (Possible t
 - Anti‑cheat buff logic – boss gains an un‑purgeable buff unless players have legitimately cleared the required wave objective.
 - Minimal AI – lightweight ny_CrawlerBossAI() shows how to hook custom behaviour via register values, simple to expand upon.
 - Log Output: Console prints for dungeon state and transitions for easier debugging.
+- Entirely custom Ai example on the 2nd path Boss
 
 #### Usage:
 Drop the file into your Lua scripts folder and adjust your game logic to include the system.
