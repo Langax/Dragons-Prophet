@@ -38,9 +38,19 @@ For full functionality, add functions such as ny_Logout() into the LuaEvent_Logo
 ### ✅ 'Backpack & Shardbag.lua'
 
 #### Features:
+- One-click entry points – ny_BackpackExpansion() and ny_ShardBagExpansion() wrap the full flow in a safe plot.
+- Yes/No dialog with timeout – reusable ny_AskYesNo() handles prompt, polling, cancel, and auto-close.
+- Centralized tuning – prices, step sizes, caps, and dialog timing exposed as top-level constants.
+- Hard caps & clamping – prevents over-expansion via max slot limits and safe math.min application.
+- Atomic transactions – validates funds before deducting gold and applying slot increases.
+- Clear player feedback – standardized success (ny_SendTargetMsg) and failure (Lua_SysWarning) messages.
+- Scalable shard pricing – flat rate up to tier threshold, then gentle size-based scaling.
+- Safe reentrancy – short sleeps and non-blocking loops reduce UI stalls and exploit windows.
+- Drop-in extensibility – isolated helpers make it easy to add new bag types or alternate currencies later.
 
 #### Usage:
-
+Drop the file into your Lua scripts folder and adjust your game logic to include the system.
+Add Collisionboxes for each function and place an appropriate NPC on top to visualize the expansion NPC for players. 
 
 ### ✅ 'Custom Dungeon.lua'
 
