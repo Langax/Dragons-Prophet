@@ -5,6 +5,8 @@ This repo contains modular, ready-to-use Lua code designed to extend and customi
 
 this repo is built to grow and scale with creating new gameplay mechanics, improving UI interactions, or tweaking core logic.
 
+These files and ideas are free to use, however I do expect credit where it is due. 
+
 ---
 
 ## 📁 Repository Structure
